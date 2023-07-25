@@ -1,0 +1,30 @@
+|Block3
+f <= Vhdl:inst2.f
+w1 => Vhdl2:inst.w1
+w2 => Vhdl2:inst.w2
+w3 => Vhdl2:inst.w3
+w4 => Vhdl2:inst.w4
+x2 => Vhdl:inst2.x2
+
+
+|Block3|Vhdl:inst2
+x1 => f~0.IN0
+x2 => f~0.IN1
+x2 => f~1.IN0
+x3 => f~1.IN1
+f <= f~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block3|Vhdl2:inst
+w1 => g~0.IN0
+w1 => h~0.IN0
+w2 => g~0.IN1
+w2 => h~1.IN0
+w3 => g~1.IN0
+w3 => h~0.IN1
+w4 => g~1.IN1
+w4 => h~1.IN1
+g <= g~2.DB_MAX_OUTPUT_PORT_TYPE
+h <= h~2.DB_MAX_OUTPUT_PORT_TYPE
+
+

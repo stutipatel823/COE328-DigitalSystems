@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Oct 22 15:17:51 2021
+Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : CombinedASU2
+Top-level Entity Name : CombinedASU2
+Family : Cyclone II
+Total logic elements : 13
+    Total combinational functions : 13
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 23
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

@@ -1,0 +1,228 @@
+Simulator report for lab3P2
+Fri Oct 22 15:18:59 2021
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 20 nodes     ;
+; Simulation Coverage         ;       0.00 % ;
+; Total Number of Transitions ; 0            ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                       ;
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                     ; Default Value ;
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                                  ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                        ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                         ;               ;
+; Vector input source                                                                        ; /home/student1/s364pate/Desktop/COE328/Lab 3-2/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                          ; On            ;
+; Check outputs                                                                              ; Off                                                         ; Off           ;
+; Report simulation coverage                                                                 ; On                                                          ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                          ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                          ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                          ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                         ; Off           ;
+; Detect glitches                                                                            ; Off                                                         ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                         ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                         ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                         ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                         ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                          ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                  ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                         ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                        ; Auto          ;
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 32-bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       0.00 % ;
+; Total nodes checked                                 ; 20           ;
+; Total output ports checked                          ; 20           ;
+; Total output ports with complete 1/0-value coverage ; 0            ;
+; Total output ports with no 1/0-value coverage       ; 20           ;
+; Total output ports with no 1-value coverage         ; 20           ;
+; Total output ports with no 0-value coverage         ; 20           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-------------------------------------------------+
+; Complete 1/0-Value Coverage                     ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-------------------------------------------------+
+; Missing 1-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+; |C|L~0    ; |C|L~0           ; out0             ;
+; |C|L~1    ; |C|L~1           ; out0             ;
+; |C|L~2    ; |C|L~2           ; out0             ;
+; |C|L~3    ; |C|L~3           ; out0             ;
+; |C|L~4    ; |C|L~4           ; out0             ;
+; |C|L~5    ; |C|L~5           ; out0             ;
+; |C|L~6    ; |C|L~6           ; out0             ;
+; |C|L~7    ; |C|L~7           ; out0             ;
+; |C|L~8    ; |C|L~8           ; out0             ;
+; |C|L~9    ; |C|L~9           ; out0             ;
+; |C|L~10   ; |C|L~10          ; out0             ;
+; |C|L~11   ; |C|L~11          ; out0             ;
+; |C|K[0]   ; |C|K[0]          ; out              ;
+; |C|K[1]   ; |C|K[1]          ; out              ;
+; |C|K[2]   ; |C|K[2]          ; out              ;
+; |C|K[3]   ; |C|K[3]          ; out              ;
+; |C|L[0]   ; |C|L[0]          ; pin_out          ;
+; |C|L[1]   ; |C|L[1]          ; pin_out          ;
+; |C|L[2]   ; |C|L[2]          ; pin_out          ;
+; |C|L[3]   ; |C|L[3]          ; pin_out          ;
++-----------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-------------------------------------------------+
+; Missing 0-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+; |C|L~0    ; |C|L~0           ; out0             ;
+; |C|L~1    ; |C|L~1           ; out0             ;
+; |C|L~2    ; |C|L~2           ; out0             ;
+; |C|L~3    ; |C|L~3           ; out0             ;
+; |C|L~4    ; |C|L~4           ; out0             ;
+; |C|L~5    ; |C|L~5           ; out0             ;
+; |C|L~6    ; |C|L~6           ; out0             ;
+; |C|L~7    ; |C|L~7           ; out0             ;
+; |C|L~8    ; |C|L~8           ; out0             ;
+; |C|L~9    ; |C|L~9           ; out0             ;
+; |C|L~10   ; |C|L~10          ; out0             ;
+; |C|L~11   ; |C|L~11          ; out0             ;
+; |C|K[0]   ; |C|K[0]          ; out              ;
+; |C|K[1]   ; |C|K[1]          ; out              ;
+; |C|K[2]   ; |C|K[2]          ; out              ;
+; |C|K[3]   ; |C|K[3]          ; out              ;
+; |C|L[0]   ; |C|L[0]          ; pin_out          ;
+; |C|L[1]   ; |C|L[1]          ; pin_out          ;
+; |C|L[2]   ; |C|L[2]          ; pin_out          ;
+; |C|L[3]   ; |C|L[3]          ; pin_out          ;
++-----------+------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Fri Oct 22 15:18:59 2021
+Info: Command: quartus_sim --simulation_results_format=VWF lab3P2 -c lab3P2
+Info (324025): Using vector source file "/home/student1/s364pate/Desktop/COE328/Lab 3-2/Waveform.vwf"
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Cin" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "leds[6]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "leds[5]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "leds[4]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "leds[3]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "leds[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "leds[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "leds[0]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "ledss[6]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "ledss[5]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "ledss[4]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "ledss[3]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "ledss[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "ledss[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "ledss[0]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "X[3]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "X[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "X[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "X[0]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Y[3]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Y[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Y[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Y[0]" in design.
+Warning (328012): Can't find signal in vector source file for input pin "|C|K[0]"
+Warning (328012): Can't find signal in vector source file for input pin "|C|K[1]"
+Warning (328012): Can't find signal in vector source file for input pin "|C|K[2]"
+Warning (328012): Can't find signal in vector source file for input pin "|C|K[3]"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is       0.00 %
+Info (328052): Number of transitions in simulation is 0
+Info (324045): Vector file lab3P2.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 32-bit Simulator was successful. 0 errors, 27 warnings
+    Info: Peak virtual memory: 273 megabytes
+    Info: Processing ended: Fri Oct 22 15:18:59 2021
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

@@ -1,0 +1,10 @@
+vendor_name = ModelSim
+source_file = 1, /home/student1/s364pate/Desktop/COE328/Lab 2/lab2.bdf
+source_file = 1, /home/student1/s364pate/Desktop/COE328/Lab 2/db/Waveform.vwf
+source_file = 1, /home/student1/s364pate/Desktop/COE328/Lab 2/db/lab2.cbx.xml
+design_name = lab2
+instance = comp, \C~I , C, lab2, 1
+instance = comp, \Y~I , Y, lab2, 1
+instance = comp, \A~I , A, lab2, 1
+instance = comp, \B~I , B, lab2, 1
+instance = comp, \D~I , D, lab2, 1

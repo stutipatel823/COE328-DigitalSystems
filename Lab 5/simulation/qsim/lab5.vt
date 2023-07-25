@@ -1,0 +1,739 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "11/30/2021 21:22:41"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    blockMoore
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module blockMoore_vlg_sample_tst(
+	clk,
+	data_in,
+	reset,
+	sampler_tx
+);
+input  clk;
+input  data_in;
+input  reset;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(clk or data_in or reset)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module blockMoore_vlg_check_tst (
+	CS_leds,
+	CS_ledss,
+	leds,
+	ledss,
+	sampler_rx
+);
+input [0:6] CS_leds;
+input [0:6] CS_ledss;
+input [0:6] leds;
+input [0:6] ledss;
+input sampler_rx;
+
+reg [0:6] CS_leds_expected;
+reg [0:6] CS_ledss_expected;
+reg [0:6] leds_expected;
+reg [0:6] ledss_expected;
+
+reg [0:6] CS_leds_prev;
+reg [0:6] CS_ledss_prev;
+reg [0:6] leds_prev;
+reg [0:6] ledss_prev;
+
+reg [0:6] CS_leds_expected_prev;
+reg [0:6] CS_ledss_expected_prev;
+reg [0:6] leds_expected_prev;
+reg [0:6] ledss_expected_prev;
+
+reg [0:6] last_CS_leds_exp;
+reg [0:6] last_CS_ledss_exp;
+reg [0:6] last_leds_exp;
+reg [0:6] last_ledss_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:4] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 4'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	CS_leds_prev = CS_leds;
+	CS_ledss_prev = CS_ledss;
+	leds_prev = leds;
+	ledss_prev = ledss;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	CS_leds_expected_prev = CS_leds_expected;
+	CS_ledss_expected_prev = CS_ledss_expected;
+	leds_expected_prev = leds_expected;
+	ledss_expected_prev = ledss_expected;
+end
+
+
+// expected CS_leds[ 6 ]
+initial
+begin
+	CS_leds_expected[6] = 1'bX;
+end 
+// expected CS_leds[ 5 ]
+initial
+begin
+	CS_leds_expected[5] = 1'bX;
+end 
+// expected CS_leds[ 4 ]
+initial
+begin
+	CS_leds_expected[4] = 1'bX;
+end 
+// expected CS_leds[ 3 ]
+initial
+begin
+	CS_leds_expected[3] = 1'bX;
+end 
+// expected CS_leds[ 2 ]
+initial
+begin
+	CS_leds_expected[2] = 1'bX;
+end 
+// expected CS_leds[ 1 ]
+initial
+begin
+	CS_leds_expected[1] = 1'bX;
+end 
+// expected CS_leds[ 0 ]
+initial
+begin
+	CS_leds_expected[0] = 1'bX;
+end 
+// expected CS_ledss[ 6 ]
+initial
+begin
+	CS_ledss_expected[6] = 1'bX;
+end 
+// expected CS_ledss[ 5 ]
+initial
+begin
+	CS_ledss_expected[5] = 1'bX;
+end 
+// expected CS_ledss[ 4 ]
+initial
+begin
+	CS_ledss_expected[4] = 1'bX;
+end 
+// expected CS_ledss[ 3 ]
+initial
+begin
+	CS_ledss_expected[3] = 1'bX;
+end 
+// expected CS_ledss[ 2 ]
+initial
+begin
+	CS_ledss_expected[2] = 1'bX;
+end 
+// expected CS_ledss[ 1 ]
+initial
+begin
+	CS_ledss_expected[1] = 1'bX;
+end 
+// expected CS_ledss[ 0 ]
+initial
+begin
+	CS_ledss_expected[0] = 1'bX;
+end 
+// expected leds[ 6 ]
+initial
+begin
+	leds_expected[6] = 1'bX;
+end 
+// expected leds[ 5 ]
+initial
+begin
+	leds_expected[5] = 1'bX;
+end 
+// expected leds[ 4 ]
+initial
+begin
+	leds_expected[4] = 1'bX;
+end 
+// expected leds[ 3 ]
+initial
+begin
+	leds_expected[3] = 1'bX;
+end 
+// expected leds[ 2 ]
+initial
+begin
+	leds_expected[2] = 1'bX;
+end 
+// expected leds[ 1 ]
+initial
+begin
+	leds_expected[1] = 1'bX;
+end 
+// expected leds[ 0 ]
+initial
+begin
+	leds_expected[0] = 1'bX;
+end 
+// expected ledss[ 6 ]
+initial
+begin
+	ledss_expected[6] = 1'bX;
+end 
+// expected ledss[ 5 ]
+initial
+begin
+	ledss_expected[5] = 1'bX;
+end 
+// expected ledss[ 4 ]
+initial
+begin
+	ledss_expected[4] = 1'bX;
+end 
+// expected ledss[ 3 ]
+initial
+begin
+	ledss_expected[3] = 1'bX;
+end 
+// expected ledss[ 2 ]
+initial
+begin
+	ledss_expected[2] = 1'bX;
+end 
+// expected ledss[ 1 ]
+initial
+begin
+	ledss_expected[1] = 1'bX;
+end 
+// expected ledss[ 0 ]
+initial
+begin
+	ledss_expected[0] = 1'bX;
+end 
+// generate trigger
+always @(CS_leds_expected or CS_leds or CS_ledss_expected or CS_ledss or leds_expected or leds or ledss_expected or ledss)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected CS_leds = %b | expected CS_ledss = %b | expected leds = %b | expected ledss = %b | ",CS_leds_expected_prev,CS_ledss_expected_prev,leds_expected_prev,ledss_expected_prev);
+	$display("| real CS_leds = %b | real CS_ledss = %b | real leds = %b | real ledss = %b | ",CS_leds_prev,CS_ledss_prev,leds_prev,ledss_prev);
+`endif
+	if (
+		( CS_leds_expected_prev[0] !== 1'bx ) && ( CS_leds_prev[0] !== CS_leds_expected_prev[0] )
+		&& ((CS_leds_expected_prev[0] !== last_CS_leds_exp[0]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port CS_leds[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", CS_leds_expected_prev);
+		$display ("     Real value = %b", CS_leds_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_CS_leds_exp[0] = CS_leds_expected_prev[0];
+	end
+	if (
+		( CS_leds_expected_prev[1] !== 1'bx ) && ( CS_leds_prev[1] !== CS_leds_expected_prev[1] )
+		&& ((CS_leds_expected_prev[1] !== last_CS_leds_exp[1]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port CS_leds[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", CS_leds_expected_prev);
+		$display ("     Real value = %b", CS_leds_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_CS_leds_exp[1] = CS_leds_expected_prev[1];
+	end
+	if (
+		( CS_leds_expected_prev[2] !== 1'bx ) && ( CS_leds_prev[2] !== CS_leds_expected_prev[2] )
+		&& ((CS_leds_expected_prev[2] !== last_CS_leds_exp[2]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port CS_leds[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", CS_leds_expected_prev);
+		$display ("     Real value = %b", CS_leds_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_CS_leds_exp[2] = CS_leds_expected_prev[2];
+	end
+	if (
+		( CS_leds_expected_prev[3] !== 1'bx ) && ( CS_leds_prev[3] !== CS_leds_expected_prev[3] )
+		&& ((CS_leds_expected_prev[3] !== last_CS_leds_exp[3]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port CS_leds[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", CS_leds_expected_prev);
+		$display ("     Real value = %b", CS_leds_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_CS_leds_exp[3] = CS_leds_expected_prev[3];
+	end
+	if (
+		( CS_leds_expected_prev[4] !== 1'bx ) && ( CS_leds_prev[4] !== CS_leds_expected_prev[4] )
+		&& ((CS_leds_expected_prev[4] !== last_CS_leds_exp[4]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port CS_leds[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", CS_leds_expected_prev);
+		$display ("     Real value = %b", CS_leds_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_CS_leds_exp[4] = CS_leds_expected_prev[4];
+	end
+	if (
+		( CS_leds_expected_prev[5] !== 1'bx ) && ( CS_leds_prev[5] !== CS_leds_expected_prev[5] )
+		&& ((CS_leds_expected_prev[5] !== last_CS_leds_exp[5]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port CS_leds[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", CS_leds_expected_prev);
+		$display ("     Real value = %b", CS_leds_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_CS_leds_exp[5] = CS_leds_expected_prev[5];
+	end
+	if (
+		( CS_leds_expected_prev[6] !== 1'bx ) && ( CS_leds_prev[6] !== CS_leds_expected_prev[6] )
+		&& ((CS_leds_expected_prev[6] !== last_CS_leds_exp[6]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port CS_leds[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", CS_leds_expected_prev);
+		$display ("     Real value = %b", CS_leds_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_CS_leds_exp[6] = CS_leds_expected_prev[6];
+	end
+	if (
+		( CS_ledss_expected_prev[0] !== 1'bx ) && ( CS_ledss_prev[0] !== CS_ledss_expected_prev[0] )
+		&& ((CS_ledss_expected_prev[0] !== last_CS_ledss_exp[0]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port CS_ledss[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", CS_ledss_expected_prev);
+		$display ("     Real value = %b", CS_ledss_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_CS_ledss_exp[0] = CS_ledss_expected_prev[0];
+	end
+	if (
+		( CS_ledss_expected_prev[1] !== 1'bx ) && ( CS_ledss_prev[1] !== CS_ledss_expected_prev[1] )
+		&& ((CS_ledss_expected_prev[1] !== last_CS_ledss_exp[1]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port CS_ledss[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", CS_ledss_expected_prev);
+		$display ("     Real value = %b", CS_ledss_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_CS_ledss_exp[1] = CS_ledss_expected_prev[1];
+	end
+	if (
+		( CS_ledss_expected_prev[2] !== 1'bx ) && ( CS_ledss_prev[2] !== CS_ledss_expected_prev[2] )
+		&& ((CS_ledss_expected_prev[2] !== last_CS_ledss_exp[2]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port CS_ledss[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", CS_ledss_expected_prev);
+		$display ("     Real value = %b", CS_ledss_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_CS_ledss_exp[2] = CS_ledss_expected_prev[2];
+	end
+	if (
+		( CS_ledss_expected_prev[3] !== 1'bx ) && ( CS_ledss_prev[3] !== CS_ledss_expected_prev[3] )
+		&& ((CS_ledss_expected_prev[3] !== last_CS_ledss_exp[3]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port CS_ledss[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", CS_ledss_expected_prev);
+		$display ("     Real value = %b", CS_ledss_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_CS_ledss_exp[3] = CS_ledss_expected_prev[3];
+	end
+	if (
+		( CS_ledss_expected_prev[4] !== 1'bx ) && ( CS_ledss_prev[4] !== CS_ledss_expected_prev[4] )
+		&& ((CS_ledss_expected_prev[4] !== last_CS_ledss_exp[4]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port CS_ledss[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", CS_ledss_expected_prev);
+		$display ("     Real value = %b", CS_ledss_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_CS_ledss_exp[4] = CS_ledss_expected_prev[4];
+	end
+	if (
+		( CS_ledss_expected_prev[5] !== 1'bx ) && ( CS_ledss_prev[5] !== CS_ledss_expected_prev[5] )
+		&& ((CS_ledss_expected_prev[5] !== last_CS_ledss_exp[5]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port CS_ledss[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", CS_ledss_expected_prev);
+		$display ("     Real value = %b", CS_ledss_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_CS_ledss_exp[5] = CS_ledss_expected_prev[5];
+	end
+	if (
+		( CS_ledss_expected_prev[6] !== 1'bx ) && ( CS_ledss_prev[6] !== CS_ledss_expected_prev[6] )
+		&& ((CS_ledss_expected_prev[6] !== last_CS_ledss_exp[6]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port CS_ledss[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", CS_ledss_expected_prev);
+		$display ("     Real value = %b", CS_ledss_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_CS_ledss_exp[6] = CS_ledss_expected_prev[6];
+	end
+	if (
+		( leds_expected_prev[0] !== 1'bx ) && ( leds_prev[0] !== leds_expected_prev[0] )
+		&& ((leds_expected_prev[0] !== last_leds_exp[0]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port leds[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", leds_expected_prev);
+		$display ("     Real value = %b", leds_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_leds_exp[0] = leds_expected_prev[0];
+	end
+	if (
+		( leds_expected_prev[1] !== 1'bx ) && ( leds_prev[1] !== leds_expected_prev[1] )
+		&& ((leds_expected_prev[1] !== last_leds_exp[1]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port leds[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", leds_expected_prev);
+		$display ("     Real value = %b", leds_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_leds_exp[1] = leds_expected_prev[1];
+	end
+	if (
+		( leds_expected_prev[2] !== 1'bx ) && ( leds_prev[2] !== leds_expected_prev[2] )
+		&& ((leds_expected_prev[2] !== last_leds_exp[2]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port leds[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", leds_expected_prev);
+		$display ("     Real value = %b", leds_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_leds_exp[2] = leds_expected_prev[2];
+	end
+	if (
+		( leds_expected_prev[3] !== 1'bx ) && ( leds_prev[3] !== leds_expected_prev[3] )
+		&& ((leds_expected_prev[3] !== last_leds_exp[3]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port leds[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", leds_expected_prev);
+		$display ("     Real value = %b", leds_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_leds_exp[3] = leds_expected_prev[3];
+	end
+	if (
+		( leds_expected_prev[4] !== 1'bx ) && ( leds_prev[4] !== leds_expected_prev[4] )
+		&& ((leds_expected_prev[4] !== last_leds_exp[4]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port leds[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", leds_expected_prev);
+		$display ("     Real value = %b", leds_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_leds_exp[4] = leds_expected_prev[4];
+	end
+	if (
+		( leds_expected_prev[5] !== 1'bx ) && ( leds_prev[5] !== leds_expected_prev[5] )
+		&& ((leds_expected_prev[5] !== last_leds_exp[5]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port leds[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", leds_expected_prev);
+		$display ("     Real value = %b", leds_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_leds_exp[5] = leds_expected_prev[5];
+	end
+	if (
+		( leds_expected_prev[6] !== 1'bx ) && ( leds_prev[6] !== leds_expected_prev[6] )
+		&& ((leds_expected_prev[6] !== last_leds_exp[6]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port leds[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", leds_expected_prev);
+		$display ("     Real value = %b", leds_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_leds_exp[6] = leds_expected_prev[6];
+	end
+	if (
+		( ledss_expected_prev[0] !== 1'bx ) && ( ledss_prev[0] !== ledss_expected_prev[0] )
+		&& ((ledss_expected_prev[0] !== last_ledss_exp[0]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ledss[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ledss_expected_prev);
+		$display ("     Real value = %b", ledss_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_ledss_exp[0] = ledss_expected_prev[0];
+	end
+	if (
+		( ledss_expected_prev[1] !== 1'bx ) && ( ledss_prev[1] !== ledss_expected_prev[1] )
+		&& ((ledss_expected_prev[1] !== last_ledss_exp[1]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ledss[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ledss_expected_prev);
+		$display ("     Real value = %b", ledss_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_ledss_exp[1] = ledss_expected_prev[1];
+	end
+	if (
+		( ledss_expected_prev[2] !== 1'bx ) && ( ledss_prev[2] !== ledss_expected_prev[2] )
+		&& ((ledss_expected_prev[2] !== last_ledss_exp[2]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ledss[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ledss_expected_prev);
+		$display ("     Real value = %b", ledss_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_ledss_exp[2] = ledss_expected_prev[2];
+	end
+	if (
+		( ledss_expected_prev[3] !== 1'bx ) && ( ledss_prev[3] !== ledss_expected_prev[3] )
+		&& ((ledss_expected_prev[3] !== last_ledss_exp[3]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ledss[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ledss_expected_prev);
+		$display ("     Real value = %b", ledss_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_ledss_exp[3] = ledss_expected_prev[3];
+	end
+	if (
+		( ledss_expected_prev[4] !== 1'bx ) && ( ledss_prev[4] !== ledss_expected_prev[4] )
+		&& ((ledss_expected_prev[4] !== last_ledss_exp[4]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ledss[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ledss_expected_prev);
+		$display ("     Real value = %b", ledss_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_ledss_exp[4] = ledss_expected_prev[4];
+	end
+	if (
+		( ledss_expected_prev[5] !== 1'bx ) && ( ledss_prev[5] !== ledss_expected_prev[5] )
+		&& ((ledss_expected_prev[5] !== last_ledss_exp[5]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ledss[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ledss_expected_prev);
+		$display ("     Real value = %b", ledss_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_ledss_exp[5] = ledss_expected_prev[5];
+	end
+	if (
+		( ledss_expected_prev[6] !== 1'bx ) && ( ledss_prev[6] !== ledss_expected_prev[6] )
+		&& ((ledss_expected_prev[6] !== last_ledss_exp[6]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ledss[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ledss_expected_prev);
+		$display ("     Real value = %b", ledss_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_ledss_exp[6] = ledss_expected_prev[6];
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#160000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$stop;
+end 
+endmodule
+
+module blockMoore_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg clk;
+reg data_in;
+reg reset;
+// wires                                               
+wire [0:6] CS_leds;
+wire [0:6] CS_ledss;
+wire [0:6] leds;
+wire [0:6] ledss;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+blockMoore i1 (
+// port map - connection between master ports and signals/registers   
+	.clk(clk),
+	.CS_leds(CS_leds),
+	.CS_ledss(CS_ledss),
+	.data_in(data_in),
+	.leds(leds),
+	.ledss(ledss),
+	.reset(reset)
+);
+
+// clk
+initial
+begin
+	clk = 1'b1;
+end 
+
+// data_in
+initial
+begin
+	data_in = 1'b0;
+	data_in = #10000 1'b1;
+	data_in = #10000 1'b0;
+	data_in = #10000 1'b1;
+	data_in = #10000 1'b0;
+	data_in = #10000 1'b1;
+	data_in = #10000 1'b0;
+	data_in = #10000 1'b1;
+	data_in = #10000 1'b0;
+	data_in = #10000 1'b1;
+	data_in = #10000 1'b0;
+	data_in = #10000 1'b1;
+	data_in = #10000 1'b0;
+	data_in = #10000 1'b1;
+	data_in = #10000 1'b0;
+	data_in = #10000 1'b1;
+end 
+
+// reset
+initial
+begin
+	reset = 1'b0;
+end 
+
+blockMoore_vlg_sample_tst tb_sample (
+	.clk(clk),
+	.data_in(data_in),
+	.reset(reset),
+	.sampler_tx(sampler)
+);
+
+blockMoore_vlg_check_tst tb_out(
+	.CS_leds(CS_leds),
+	.CS_ledss(CS_ledss),
+	.leds(leds),
+	.ledss(ledss),
+	.sampler_rx(sampler)
+);
+endmodule
+
